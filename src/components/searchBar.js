@@ -19,7 +19,7 @@ class searchBar extends Component {
     }
 
     clickSearch() {
-        if (window.location.pathname !== '/'){
+        if (window.location.pathname !== '/list'){
             this.setState({ redirect: true});
         }
     }

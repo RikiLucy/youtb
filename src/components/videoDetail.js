@@ -26,11 +26,11 @@ class videoDetail extends Component {
 
                     <CardText>
                         <iframe id="ytplayer" type="text/html" width="720" height="405"
-                                title={this.pro}
+                                title={this.props.match.params.id}
                                 src={ 'https://www.youtube.com/embed/' + this.props.match.params.id }
-                                frameborder="0" allowfullscreen />
+                                frameBorder="0" allowFullScreen />
                     </CardText>
-                    { this.state.redirect && (<Redirect to={'/list'} />)}
+                    { this.state.redirect && (<Redirect to={'/list'} />) }
                 </Card>
         );
     }
