@@ -1,10 +1,37 @@
 import React, { Component } from 'react';
+import SearchBar from './searchBar';
+import { Card, CardHeader, CardText } from '../../node_modules/material-ui/Card';
+import { Redirect } from 'react-router-dom';
+
+
 
 class videoDetail extends Component {
 
+    constructor(props){
+        super(props);
+        this.state = {
+            redirect: false
+        };
+    }
+
     render() {
         return (
-            <h1> Detail</h1>
+                <Card>
+                    <CardHeader
+                        title="Одностраничное приложение для поиска Youtube-видеозаписей на ReactJs"
+                        subtitle="@RikiLucy"
+                    >
+                        <SearchBar />
+                    </CardHeader>
+
+                    <CardText>
+                        <iframe id="ytplayer" type="text/html" width="720" height="405"
+                                title={this.pro}
+                                src={ 'https://www.youtube.com/embed/' + this.props.match.params.id }
+                                frameborder="0" allowfullscreen />
+                    </CardText>
+                    { this.state.redirect && (<Redirect to={'/list'} />)}
+                </Card>
         );
     }
 }

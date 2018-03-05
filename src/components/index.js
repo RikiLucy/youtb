@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {Card, CardActions, CardHeader, CardText} from '../../node_modules/material-ui/Card';
-import TextField from '../../node_modules/material-ui/TextField';
-import FlatButton from '../../node_modules/material-ui/FlatButton';
+import {Card, CardHeader, CardText} from '../../node_modules/material-ui/Card';
 import { Redirect } from 'react-router-dom';
 import SearchBar from './searchBar';
 

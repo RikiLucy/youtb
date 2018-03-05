@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import SearchBar from './searchBar';
-import {Card, CardActions, CardHeader, CardText} from '../../node_modules/material-ui/Card';
+import { Card, CardHeader, CardText } from '../../node_modules/material-ui/Card';
 import VideoListItem from './videoListItem';
+import { GridList } from 'material-ui/GridList';
 
 
 
@@ -36,7 +37,23 @@ class videoList extends Component {
                     />
                 </CardHeader>
                 <CardText>
-                    <VideoListItem list={this.state.filterText}/>
+                    <GridList
+                        cellHeight={375}
+                        // style={styles.gridList}
+                        cols={5}
+                        padding={2}
+                    >
+                        {this.state.filterText.map((item) => (
+                            <VideoListItem
+                                key={item.id}
+                                id={item.id}
+                                preview={item.preview}
+                                title={item.title}
+                                desc={item.desc}
+                            />
+                        ))}
+                    </GridList>
+
 
                 </CardText>
             </Card>

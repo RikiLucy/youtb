@@ -19,7 +19,7 @@ class searchBar extends Component {
     }
 
     clickSearch() {
-        if (window.location.pathname == '/'){
+        if (window.location.pathname !== '/'){
             this.setState({ redirect: true});
         }
     }
@@ -33,6 +33,7 @@ class searchBar extends Component {
                 autocomplete.forEach((item, i, autocomplete) => {
                     autocomplete.push(item.snippet.title);
                     videoList.push({
+                        id: item.id.videoId,
                         preview: item.snippet.thumbnails.high.url,
                         title: item.snippet.title,
                         desc: item.snippet.description
@@ -40,16 +41,15 @@ class searchBar extends Component {
                 });
 
                 console.log(res);
-                console.log(videoList);
                 this.setState({
                     videos: autocomplete
-                })
-                //this.props.onUserInput(res);
+                });
+                this.props.onUserInput(videoList);
             });
     }
 
     componentDidMount(){
-        if (window.location.pathname == '/list'){
+        if (window.location.pathname === '/list'){
             this.refs.search.focus();
         }
     }
@@ -65,6 +65,7 @@ class searchBar extends Component {
                 onUpdateInput={this.handleChange}
                 filter={AutoComplete.caseInsensitiveFilter}
                 fullWidth={true}
+                maxSearchResults={4}
             />
             { this.state.redirect && (<Redirect to={'/list'} />)}
             </div>
