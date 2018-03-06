@@ -8,14 +8,10 @@ class index extends Component {
 
     constructor(props, context) {
         super(props, context);
-        console.log(this.props.tab);
         this.state = {
             redirect: false
         }
     }
-
-
-
 
     render() {
         return (

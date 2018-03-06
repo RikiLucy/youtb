@@ -3,7 +3,6 @@ import { GridTile } from 'material-ui/GridList';
 import { Redirect } from 'react-router-dom';
 
 
-
 class videoListItem extends Component {
 
     constructor(props){
@@ -18,7 +17,7 @@ class videoListItem extends Component {
         if (window.location.pathname === '/list'){
             this.setState({ redirect: true});
         }
-        console.log(this.props.id);
+        //console.log(this.props.id);
     }
 
     render() {

@@ -4,7 +4,6 @@ import { Card, CardHeader, CardText } from '../../node_modules/material-ui/Card'
 import { Redirect } from 'react-router-dom';
 
 
-
 class videoDetail extends Component {
 
     constructor(props){

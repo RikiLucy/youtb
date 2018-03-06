@@ -10,7 +10,6 @@ class videoList extends Component {
 
     constructor(props, context) {
         super(props, context);
-        console.log(this.props.match.params.search);
         this.handleUserInput = this.handleUserInput.bind(this);
         this.state = {
             filterText: []
@@ -19,7 +18,7 @@ class videoList extends Component {
     }
 
     handleUserInput(filterText){
-        console.log(filterText);
+        //console.log(filterText);
         this.setState({
             filterText: filterText
         });

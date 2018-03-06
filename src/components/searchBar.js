@@ -40,7 +40,7 @@ class searchBar extends Component {
                     });
                 });
 
-                console.log(res);
+                //console.log(res);
                 this.setState({
                     videos: autocomplete
                 });
@@ -53,7 +53,6 @@ class searchBar extends Component {
             this.refs.search.focus();
         }
     }
-
 
     render() {
         return (

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route, Switch, Link } from 'react-router-dom';
 
-// AIzaSyA2hgYchwsDaNkju_P1oaF16zRL5c6UfSA
-
 import Index from './components/index';
 import VideoDetail from './components/videoDetail';
 import VideoList from './components/videoList';
@@ -19,18 +17,6 @@ import MoreVertIcon from '../node_modules/material-ui/svg-icons/navigation/more-
 
 
 class App extends Component {
-
-  // constructor(props) {
-  //     super(props);
-  // }
-
-  // handleChange = (value) => {
-  //   this.setState({
-  //       value: value
-  //   });
-  // };
-
-
 
   render() {
     return (
