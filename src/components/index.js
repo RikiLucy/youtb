@@ -28,12 +28,6 @@ class index extends Component {
                 </CardHeader>
 
                 <CardText>
-
-                    {/*<TextField*/}
-                        {/*floatingLabelText="Название видео"*/}
-                        {/*ref="search"*/}
-                    {/*/>*/}
-                    {/*<FlatButton label="Найти" primary={true} onClick={() => this.search()}/>*/}
                 </CardText>
                 { this.state.redirect && (<Redirect to={'/list/' + this.refs.search.getValue()} />)}
             </Card>

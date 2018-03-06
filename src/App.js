@@ -35,12 +35,7 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider>
-          {/*<Tabs*/}
-          {/*>*/}
-             {/*<Tab value='a' label="Поиск" containerElement={<Link to="/"/>} />*/}
-             {/*<Tab value='b' label="Результат" containerElement={<Link to="/list"/>} />*/}
-             {/*<Tab value='c' label="Просмотр" containerElement={<Link to="/watch"/>} />*/}
-          {/*</Tabs>*/}
+          <div>
           <IconMenu
               iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
               anchorOrigin={{horizontal: 'left', vertical: 'top'}}
@@ -56,6 +51,7 @@ class App extends Component {
               <Route exact path="/list/:search?" component={VideoList}/>
               <Route exact path="/watch/:id?" component={VideoDetail}/>
           </Switch>
+          </div>
       </MuiThemeProvider>
     );
   }
